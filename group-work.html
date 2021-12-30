@@ -1,0 +1,439 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>How to organize a group’s work &#8212; GitHub without the command line</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Making your project citable" href="doi.html" />
+    <link rel="prev" title="Contributing to existing repositories using pull requests" href="contributing.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">GitHub without the command line</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="index.html">
+   Collaborating and sharing using GitHub without command line
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  The Lesson
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="basics.html">
+   Basics and motivation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="creating-using-web.html">
+   Creating repositories using the web interface
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="creating-using-desktop.html">
+   Creating repositories using GitHub Desktop
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="contributing.html">
+   Contributing to existing repositories using pull requests
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   How to organize a group’s work
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="doi.html">
+   Making your project citable
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="websites.html">
+   Hosting websites/homepages on GitHub Pages
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Reference
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="quick-reference.html">
+   Quick reference
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="guide.html">
+   Instructor’s guide
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/group-work.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#github-organizations">
+   GitHub organizations
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#organizational-permissions">
+   Organizational permissions
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#github-or-gitlab">
+   GitHub or GitLab?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#direct-commits-or-pull-requests">
+   Direct commits or pull requests?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#small-vs-large-changes">
+   Small vs. large changes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#optional-exercise-contributing-larger-changes">
+   Optional exercise contributing larger changes
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise">
+     Exercise
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bonus-exercise">
+     Bonus exercise
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="how-to-organize-a-group-s-work">
+<h1>How to organize a group’s work<a class="headerlink" href="#how-to-organize-a-group-s-work" title="Permalink to this headline">¶</a></h1>
+<div class="admonition-discussion admonition">
+<p class="admonition-title">Discussion</p>
+<p>Do you want to work together? What are the benefits? How much of our
+individual work is caused by not having a way to collaborate? If we could
+collaborate, would it improve the quality of our work? Do we want to?”</p>
+</div>
+<div class="section" id="github-organizations">
+<h2>GitHub organizations<a class="headerlink" href="#github-organizations" title="Permalink to this headline">¶</a></h2>
+<p>Should I start a repository under my account or open a new organization?</p>
+<ul class="simple">
+<li><p>Single-person projects often start under own account.</p></li>
+<li><p>It is no problem to move a project from own namespace to an organization later.</p></li>
+<li><p>When starting a larger project with several people, possibly several affiliations, an organization may be a better start.</p></li>
+<li><p>If this is a GitHub pages project, then it will matter for the URL:
+<code class="docutils literal notranslate"><span class="pre">myuser.github.io/myproject/</span></code> vs. <code class="docutils literal notranslate"><span class="pre">ourorg.github.io/ourproject/</span></code>.</p></li>
+</ul>
+<p>Should I add everybody as collaborator?</p>
+<ul class="simple">
+<li><p>If you are a handful of project collaborators it probably makes sense to add everybody as collaborators.</p></li>
+<li><p>But one does not have to be a <em>collaborator</em> to contribute (anybody can send contributions to public projects).</p></li>
+<li><p>External contributors don’t have to be added.</p></li>
+</ul>
+</div>
+<hr class="docutils" />
+<div class="section" id="organizational-permissions">
+<h2>Organizational permissions<a class="headerlink" href="#organizational-permissions" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Organizations have <strong>owners</strong> and <strong>members</strong>.</p></li>
+<li><p>Owners can add additional members and delete repositories.</p></li>
+<li><p>Members can also be organized into teams.</p></li>
+<li><p>We recommend to write-protect the default branch and protect it against force-pushes and accidental deletions.</p></li>
+</ul>
+</div>
+<hr class="docutils" />
+<div class="section" id="github-or-gitlab">
+<h2>GitHub or GitLab?<a class="headerlink" href="#github-or-gitlab" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>GitHub: probably better integrations (with services like Zenodo), probably more visibility (more users).</p></li>
+<li><p>GitLab: more features, you can also self-host, more advanced continuous integration.</p></li>
+<li><p>Your own university’s GitLab: most control, local support, but limited visibility and you might lose access when you move on.</p></li>
+</ul>
+</div>
+<hr class="docutils" />
+<div class="section" id="direct-commits-or-pull-requests">
+<h2>Direct commits or pull requests?<a class="headerlink" href="#direct-commits-or-pull-requests" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>For single-person projects: direct pushes.</p></li>
+<li><p>If you have somebody who can help you with code review: use pull requests.</p></li>
+<li><p>For projects with 2 or more persons: agree on applying all changes via pull requests
+and create a new branch for every change.</p></li>
+<li><p>Do you ever review what others do? Would it improve your work if you did?
+Would it overall save time?</p></li>
+</ul>
+</div>
+<hr class="docutils" />
+<div class="section" id="small-vs-large-changes">
+<h2>Small vs. large changes<a class="headerlink" href="#small-vs-large-changes" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>For larger changes first open an issue and describe your idea and collect feedback.</p></li>
+<li><p>Alternative: if you already have a larger change half-finished but you are unsure whether you are on the right
+track, open a <strong>draft pull request</strong>. These are meant to share unfinished drafts and collect suggestions.</p></li>
+</ul>
+</div>
+<hr class="docutils" />
+<div class="section" id="optional-exercise-contributing-larger-changes">
+<h2>Optional exercise contributing larger changes<a class="headerlink" href="#optional-exercise-contributing-larger-changes" title="Permalink to this headline">¶</a></h2>
+<div class="tip admonition">
+<p class="admonition-title">Instructor Note</p>
+<ul class="simple">
+<li><p>A participant shares screen and creates a repository, then instructor takes screen share and
+we go through steps to contribute to that repository (without write permissions), then
+screen share goes back to participant and we together review this change</p></li>
+</ul>
+</div>
+<div class="section" id="exercise">
+<h3>Exercise<a class="headerlink" href="#exercise" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>We first open an issue via the web interface
+and describe our idea. In the issue we can collect feedback</p></li>
+<li><p>We clone the exercise repository using GitHub Desktop</p></li>
+<li><p>Create a new branch</p></li>
+<li><p>Add the new file to the local repository</p></li>
+<li><p>Commit and refer to the issue (e.g. here closing issue number 12: “this is the commit message, closes #12”)</p></li>
+<li><p>Try to publish that branch (you may not have write permissions to the repository on GitHub)</p></li>
+<li><p>If you don’t have write permissions: “Fork this repository”, then try to publish the branch to the fork</p></li>
+<li><p>“Create Pull Request”</p></li>
+<li><p>If you forgot to refer to the issue in the commit, you can <a class="reference external" href="https://help.github.com/en/github/managing-your-work-on-github/linking-a-pull-request-to-an-issue">refer to the issue</a> in the pull request</p></li>
+</ul>
+</div>
+<div class="section" id="bonus-exercise">
+<h3>Bonus exercise<a class="headerlink" href="#bonus-exercise" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Send a pull request with a typo/mistake in it and adjust the pull request with a subsequent commit. Discuss
+how adjusting pull requests can be a useful mechanism.</p></li>
+</ul>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="contributing.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Contributing to existing repositories using pull requests</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="doi.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Making your project citable</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          By Code Refinery<br/>
+        
+            &copy; Copyright CC-BY.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
