@@ -26,40 +26,22 @@ command-line course Git course such as
 course](https://coderefinery.github.io/git-intro/).  Check out our
 [other upcoming workshops](https://coderefinery.org/workshops/upcoming/).
 
-> ## Why GitHub
->
-> We will do this exercise on [GitHub](https://github.com) but also
-> [GitLab](https://gitlab.com) and [Bitbucket](https://bitbucket.org) allow
-> similar workflows and basically everything that we will discuss is transferable. With
-> this material and these exercises we do not endorse the company
-> [GitHub](https://github.com). We have chosen to demonstrate a number of
-> concepts using examples with [GitHub](https://github.com) because it is
-> currently the most popular web platform for hosting Git repositories and the chance is high
-> that you will interact with [GitHub](https://github.com)-based repositories even if you
-> choose to host your Git repository on another platform.
->
-> We also encourage course participants to use our new [Nordic research software repository platform](https://source.coderefinery.org),
-> for more information see [https://coderefinery.org/repository/](https://coderefinery.org/repository/).
-{: .admonition}
+```{admonition} Why GitHub
+We will do this exercise on [GitHub](https://github.com) but also
+[GitLab](https://gitlab.com) and [Bitbucket](https://bitbucket.org) allow
+similar workflows and basically everything that we will discuss is transferable. With
+this material and these exercises we do not endorse the company
+[GitHub](https://github.com). We have chosen to demonstrate a number of
+concepts using examples with [GitHub](https://github.com) because it is
+currently the most popular web platform for hosting Git repositories and the chance is high
+that you will interact with [GitHub](https://github.com)-based repositories even if you
+choose to host your Git repository on another platform.
 
+We also encourage course participants to use our new [Nordic research software repository platform](https://source.coderefinery.org),
+for more information see [https://coderefinery.org/repository/](https://coderefinery.org/repository/).
+```
 
 ## The lesson
-
-```{toctree}
----
-caption: The lesson
-maxdepth: 1
-hidden:
----
-
-basics
-creating-using-web
-creating-using-desktop
-contributing
-group-work
-doi
-websites
-```
 
 ```{csv-table}
 ---
@@ -74,45 +56,33 @@ widths: auto
 30 min , {doc}`websites`
 ```
 
-
-```{toctree}
----
-caption: Reference
-maxdepth: 1
----
-
-quick-reference
-guide
-```
-
-
 ## Preparations
 
 Not required:
 - Previous knowledge of Git or GitHub
 - Knowledge of the command line
 
-> Please prepare these before the workshop:
-> - Install the [Zoom client](https://zoom.us/download) ([our
->   tips](https://coderefinery.github.io/installation/zoom/))
-> - Get a [GitHub account](https://github.com/join)
->   ([here](https://docs.github.com/en/github/setting-up-and-managing-your-github-user-account/deleting-your-user-account)
->   are instructions on how to remove it later if you do not wish to keep it)
-> - Install GitHub Desktop:
->   - [Windows and macOS](https://desktop.github.com/)
->   - [Linux](https://github.com/shiftkey/desktop/blob/linux/README.md)
-> - Read the following quick guides on attending workshops:
->   - Read our tips on [in
->   person](https://coderefinery.github.io/manuals/how-to-attend-inperson/)
->   or [online](https://coderefinery.github.io/manuals/how-to-attend-online/) workshops
->   - [Zoom signals we use](https://coderefinery.github.io/manuals/zoom-mechanics/)
->   - [How we use HackMD](https://coderefinery.github.io/manuals/hackmd-mechanics/)
->
-> Troubleshooting:
->   - GitHub Desktop not showing up on macOS launchpad:
->     - You can find it in "Downloads"
->
-{: .prereq}
+```{admonition} Prerequisites
+Please prepare these before the workshop:
+ - Install the [Zoom client](https://zoom.us/download) ([our
+    tips](https://coderefinery.github.io/installation/zoom/))
+ - Get a [GitHub account](https://github.com/join)
+   ([here](https://docs.github.com/en/github/setting-up-and-managing-your-github-user-account/deleting-your-user-account)
+   are instructions on how to remove it later if you do not wish to keep it)
+ - Install GitHub Desktop:
+   - [Windows and macOS](https://desktop.github.com/)
+   - [Linux](https://github.com/shiftkey/desktop/blob/linux/README.md)
+ - Read the following quick guides on attending workshops:
+   - Read our tips on [in
+   person](https://coderefinery.github.io/manuals/how-to-attend-inperson/)
+   or [online](https://coderefinery.github.io/manuals/how-to-attend-online/) workshops
+   - [Zoom signals we use](https://coderefinery.github.io/manuals/zoom-mechanics/)
+   - [How we use HackMD](https://coderefinery.github.io/manuals/hackmd-mechanics/)
+
+Troubleshooting:
+ - GitHub Desktop not showing up on macOS launchpad:
+    - You can find it in "Downloads"
+```
 
 Optional reading:
 - [Quickly get started with common tasks on GitHub](https://help.github.com/en/github/getting-started-with-github/quickstart)

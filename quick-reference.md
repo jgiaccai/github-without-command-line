@@ -30,7 +30,10 @@
 
 ## Accessing list of branches and commits
 
-<img src="{{ site.baseurl }}/img/quick-reference/overview.png" width="600px" style="border:2px solid #000000;">
+```{image} /img/quick-reference/overview.png
+:width: 600px
+:class: border
+```
 
 For network view, click on "Settings", then "Network".
 

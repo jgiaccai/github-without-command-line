@@ -1,0 +1,16 @@
+format: jb-book
+root: index
+parts:
+  - caption: The Lesson
+    chapters:
+    - file: basics
+    - file: creating-using-web
+    - file: creating-using-desktop
+    - file: contributing
+    - file: group-work
+    - file: doi
+    - file: websites
+  - caption: Reference
+    chapters:
+    - file: quick-reference
+    - file: guide

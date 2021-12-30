@@ -1,7 +1,7 @@
-
-
 # Collaborating and sharing using GitHub without command line
 
+This is a [Jupyter Book](http://jupyterbook.org/) fork of the original
+workshop from Code Refinery.
 
 ## Credit and license
 

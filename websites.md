@@ -35,9 +35,8 @@ material is hosted.
 The documentation for GitHub Pages is very good so no need for us to duplicate
 screenshots: [https://pages.github.com/](https://pages.github.com/)
 
-> ## Discussion
->
-> - You can use HTML directly or another static site generator if you prefer
->   to not use the default [Jekyll](https://jekyllrb.com/).
-> - It is no problem to use a custom domain instead of `*.github.io`.
-{: .discussion}
+```{admonition} Discussion
+- You can use HTML directly or another static site generator if you prefer
+  to not use the default [Jekyll](https://jekyllrb.com/).
+- It is no problem to use a custom domain instead of `*.github.io`.
+```

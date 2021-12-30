@@ -61,9 +61,15 @@ will only exist on our computer, not yet on GitHub.
 - Start GitHub Desktop
 - Click on "+ Create a New Repository on your hard drive..."
 
-<img src="{{ site.baseurl }}/img/creating-using-desktop/before-create.png" width="600px" style="border:2px solid #000000;">
+```{image} /img/creating-using-desktop/before-create.png
+:width: 600px
+:class: border
+```
 
-<img src="{{ site.baseurl }}/img/creating-using-desktop/creating.png" width="600px" style="border:2px solid #000000;">
+```{image} /img/creating-using-desktop/creating.png
+:width: 600px
+:class: border
+```
 
 ---
 
@@ -76,7 +82,10 @@ then tell git to save it.
 - Note how GitHub desktop changed and shows you the changes
 - Make a commit
 
-<img src="{{ site.baseurl }}/img/creating-using-desktop/diff-before-commit.png" width="600px" style="border:2px solid #000000;">
+```{image} /img/creating-using-desktop/diff-before-commit.png
+:width: 600px
+:class: border
+```
 
 ---
 
@@ -94,7 +103,10 @@ middle steps.
 - Click "Publish repository" (this only publishes the current branch)
 - After you have pushed, visit the repository via the website
 
-<img src="{{ site.baseurl }}/img/creating-using-desktop/publish.png" width="600px" style="border:2px solid #000000;">
+```{image} /img/creating-using-desktop/publish.png
+:width: 600px
+:class: border
+```
 
 ---
 
@@ -109,7 +121,10 @@ later.
 - Create a new branch on GitHub Desktop
 - "Bring my changes to ..." the new branch:
 
-<img src="{{ site.baseurl }}/img/creating-using-desktop/switch-branch.png" width="600px" style="border:2px solid #000000;">
+```{image} /img/creating-using-desktop/switch-branch.png
+:width: 600px
+:class: border
+```
 
 - Commit to the new branch on GitHub Desktop
 - Publish the new branch to GitHub
@@ -126,19 +141,31 @@ Now we show how to **fetch** or **pull** code from Github→local.
 - Change current branch to `master`
 - Click "Fetch origin"
 
-<img src="{{ site.baseurl }}/img/creating-using-desktop/fetch-origin.png" width="600px" style="border:2px solid #000000;">
+```{image} /img/creating-using-desktop/fetch-origin.png
+:width: 600px
+:class: border
+```
 
 - Before continuing compare the histories on your computer and the network on GitHub and discuss what fetch did:
 
-<img src="{{ site.baseurl }}/img/creating-using-desktop/network.png" width="600px" style="border:2px solid #000000;">
+```{image} /img/creating-using-desktop/network.png
+:width: 600px
+:class: border
+```
 
 - Click "Pull origin"
 
-<img src="{{ site.baseurl }}/img/creating-using-desktop/pull-origin.png" width="600px" style="border:2px solid #000000;">
+```{image} /img/creating-using-desktop/pull-origin.png
+:width: 600px
+:class: border
+```
 
 - After pulling browse the "History" in GitHub Desktop
 
-<img src="{{ site.baseurl }}/img/creating-using-desktop/after-pull.png" width="600px" style="border:2px solid #000000;">
+```{image} /img/creating-using-desktop/after-pull.png
+:width: 600px
+:class: border
+```
 
 What's the difference between **fetch** and **pull**?  Fetch gets the
 changes, but doesn't apply them locally.  Pull = fetch + apply changes
@@ -147,16 +174,15 @@ discuss later).
 
 ---
 
-> ## Summary
->
-> With Github Desktop, we can do everything we can on the web, but it's
-> more natural.  The most important concepts are that of **remotes**
-> (links between repositories), **pushing**, and **pulling**.
->
-> We don't cover it in this workshop, but you can eventually do all of
-> these things from the command line, for example `git commit
-> some_file.csv`.  Once you are doing many things, this can be faster.
-> Still, there's almost always a place for applications like the GitHub Desktop
-> and other graphical user interfaces to
-> make things smoother.
-{: .discussion}
+```{admonition} Summary
+With Github Desktop, we can do everything we can on the web, but it's
+more natural.  The most important concepts are that of **remotes**
+(links between repositories), **pushing**, and **pulling**.
+
+We don't cover it in this workshop, but you can eventually do all of
+these things from the command line, for example `git commit
+some_file.csv`.  Once you are doing many things, this can be faster.
+Still, there's almost always a place for applications like the GitHub Desktop
+and other graphical user interfaces to
+make things smoother.
+```
