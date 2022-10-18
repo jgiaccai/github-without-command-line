@@ -1,0 +1,540 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Collaborating and sharing using GitHub without command line &#8212; GitHub without the command line</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Basics and motivation" href="basics.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="#">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">GitHub without the command line</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1 current active">
+                <a class="reference internal" href="#">
+                    Collaborating and sharing using GitHub without command line
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  The Lesson
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="basics.html">
+   Basics and motivation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="creating-using-web.html">
+   Creating repositories using the web interface
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="contributing.html">
+   GitHub Issues and Pull Requests
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="gh-desktop-changes.html">
+   Making changes with GitHub Desktop
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="gh-desktop-create.html">
+   Creating a respository with GitHub Desktop
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="websites.html">
+   Hosting websites on GitHub Pages
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="smithsonian.html">
+   Smithsonian Specifics
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Reference
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="quick-reference.html">
+   Quick reference
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="guide.html">
+   Instructor’s guide
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/index.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-lesson">
+   The lesson
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#preparations">
+   Preparations
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#see-also">
+   See also
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Collaborating and sharing using GitHub without command line</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-lesson">
+   The lesson
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#preparations">
+   Preparations
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#see-also">
+   See also
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="collaborating-and-sharing-using-github-without-command-line">
+<h1>Collaborating and sharing using GitHub without command line<a class="headerlink" href="#collaborating-and-sharing-using-github-without-command-line" title="Permalink to this headline">#</a></h1>
+<p>This tutorial provides a brief but hands-on introduction to Git and
+GitHub to exercise useful workflows within GitHub.  Git is a version
+control system which allows files and data to be tracked synchronized,
+which allows collaboration and reproducibility.
+GitHub is a popular website that stores these repositories.</p>
+<p><strong>This tutorial avoids using the command line</strong>. Instead, we will practice collaborating and
+sharing using either the GitHub website or GitHub desktop
+application.  Why?  Because for many cases, it is enough.  Especially
+if you are contributing to existing non-code projects, this may be the
+fastest, easiest way to do it.  Git and GitHub provide collaboration
+tools to all kinds of projects, and there are all kinds of good ways
+to use it.</p>
+<p>This serves as an introduction to Git.  After this lesson, you will
+both be able to use Git, and feel much more confident taking a
+command-line course Git course such as
+<a class="reference external" href="https://coderefinery.github.io/git-intro/">CodeRefinery’s git-intro
+course</a>.  Check out our
+<a class="reference external" href="https://coderefinery.org/workshops/upcoming/">other upcoming workshops</a>.</p>
+<div class="admonition-why-github admonition">
+<p class="admonition-title">Why GitHub</p>
+<p>We will do this exercise on <a class="reference external" href="https://github.com">GitHub</a> but also
+<a class="reference external" href="https://gitlab.com">GitLab</a> and <a class="reference external" href="https://bitbucket.org">Bitbucket</a> allow
+similar workflows and basically everything that we will discuss is transferable. With
+this material and these exercises we do not endorse the company
+<a class="reference external" href="https://github.com">GitHub</a>. We have chosen to demonstrate a number of
+concepts using examples with <a class="reference external" href="https://github.com">GitHub</a> because it is
+currently the most popular web platform for hosting Git repositories and the chance is high
+that you will interact with <a class="reference external" href="https://github.com">GitHub</a>-based repositories even if you
+choose to host your Git repository on another platform.</p>
+<p>We also encourage course participants to use our new <a class="reference external" href="https://source.coderefinery.org">Nordic research software repository platform</a>,
+for more information see <a class="reference external" href="https://coderefinery.org/repository/">https://coderefinery.org/repository/</a>.</p>
+</div>
+<section id="the-lesson">
+<h2>The lesson<a class="headerlink" href="#the-lesson" title="Permalink to this headline">#</a></h2>
+<table class="colwidths-auto table">
+<tbody>
+<tr class="row-odd"><td><p>20 min</p></td>
+<td><p><a class="reference internal" href="basics.html"><span class="doc">Basics and motivation</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>30 min</p></td>
+<td><p><a class="reference internal" href="creating-using-web.html"><span class="doc">Creating repositories using the web interface</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>40 min</p></td>
+<td><p><span class="xref std std-doc">creating-using-desktop</span></p></td>
+</tr>
+<tr class="row-even"><td><p>60 min</p></td>
+<td><p><a class="reference internal" href="contributing.html"><span class="doc">GitHub Issues and Pull Requests</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>30 min</p></td>
+<td><p><span class="xref std std-doc">group-work</span></p></td>
+</tr>
+<tr class="row-even"><td><p>30 min</p></td>
+<td><p><span class="xref std std-doc">doi</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>30 min</p></td>
+<td><p><a class="reference internal" href="websites.html"><span class="doc">Hosting websites on GitHub Pages</span></a></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="preparations">
+<h2>Preparations<a class="headerlink" href="#preparations" title="Permalink to this headline">#</a></h2>
+<p>Not required:</p>
+<ul class="simple">
+<li><p>Previous knowledge of Git or GitHub</p></li>
+<li><p>Knowledge of the command line</p></li>
+</ul>
+<div class="admonition-prerequisites admonition">
+<p class="admonition-title">Prerequisites</p>
+<p>Please prepare these before the workshop:</p>
+<ul class="simple">
+<li><p>Install the <a class="reference external" href="https://zoom.us/download">Zoom client</a> (<a class="reference external" href="https://coderefinery.github.io/installation/zoom/">our
+tips</a>)</p></li>
+<li><p>Get a <a class="reference external" href="https://github.com/join">GitHub account</a>
+(<a class="reference external" href="https://docs.github.com/en/github/setting-up-and-managing-your-github-user-account/deleting-your-user-account">here</a>
+are instructions on how to remove it later if you do not wish to keep it)</p></li>
+<li><p>Install GitHub Desktop:</p>
+<ul>
+<li><p><a class="reference external" href="https://desktop.github.com/">Windows and macOS</a></p></li>
+<li><p><a class="reference external" href="https://github.com/shiftkey/desktop/blob/linux/README.md">Linux</a></p></li>
+</ul>
+</li>
+<li><p>Read the following quick guides on attending workshops:</p>
+<ul>
+<li><p>Read our tips on <a class="reference external" href="https://coderefinery.github.io/manuals/how-to-attend-inperson/">in
+person</a>
+or <a class="reference external" href="https://coderefinery.github.io/manuals/how-to-attend-online/">online</a> workshops</p></li>
+<li><p><a class="reference external" href="https://coderefinery.github.io/manuals/zoom-mechanics/">Zoom signals we use</a></p></li>
+<li><p><a class="reference external" href="https://coderefinery.github.io/manuals/hackmd-mechanics/">How we use HackMD</a></p></li>
+</ul>
+</li>
+</ul>
+<p>Troubleshooting:</p>
+<ul class="simple">
+<li><p>GitHub Desktop not showing up on macOS launchpad:</p>
+<ul>
+<li><p>You can find it in “Downloads”</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<p>Optional reading:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://help.github.com/en/github/getting-started-with-github/quickstart">Quickly get started with common tasks on GitHub</a></p></li>
+</ul>
+</section>
+<section id="see-also">
+<h2>See also<a class="headerlink" href="#see-also" title="Permalink to this headline">#</a></h2>
+<p>These similar workshops which serve as inspiration</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/lexnederbragt/github_collab_workshop">https://github.com/lexnederbragt/github_collab_workshop</a></p></li>
+<li><p><a class="reference external" href="https://github.com/arockenberger/github_collab_workshop">https://github.com/arockenberger/github_collab_workshop</a></p></li>
+</ul>
+</section>
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='right-next' id="next-link" href="basics.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Basics and motivation</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Code Refinery<br/>
+  
+      &copy; Copyright CC-BY.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

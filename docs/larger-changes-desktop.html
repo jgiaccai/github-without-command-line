@@ -1,0 +1,582 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Making larger changes with GitHub Desktop &#8212; GitHub without the command line</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">GitHub without the command line</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="index.html">
+                    Collaborating and sharing using GitHub without command line
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  The Lesson
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="basics.html">
+   Basics and motivation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="creating-using-web.html">
+   Creating repositories using the web interface
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="contributing.html">
+   GitHub Issues and Pull Requests
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="gh-desktop-changes.html">
+   Making changes with GitHub Desktop
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="gh-desktop-create.html">
+   Creating a respository with GitHub Desktop
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="websites.html">
+   Hosting websites/homepages on GitHub Pages
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="smithsonian.html">
+   Smithsonian Specifics
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Reference
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="quick-reference.html">
+   Quick reference
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="guide.html">
+   Instructor’s guide
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/larger-changes-desktop.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#step-1-create-an-example-spreadsheet">
+   Step 1: Create an example spreadsheet
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#step-2-initialize-a-repository-with-github-desktop">
+   Step 2: Initialize a repository with GitHub Desktop
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#step-3-commit-the-csv-data-file">
+   Step 3: Commit the CSV data file
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#step-4-publish-the-repository-on-github">
+   Step 4: Publish the repository on GitHub
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#step-5-create-a-branch-commit-to-it-and-share-it">
+   Step 5: Create a branch, commit to it, and share it
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#step-6-fetch-and-pull-changes-from-the-web">
+   Step 6: Fetch and pull changes from the web
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Making larger changes with GitHub Desktop</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#step-1-create-an-example-spreadsheet">
+   Step 1: Create an example spreadsheet
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#step-2-initialize-a-repository-with-github-desktop">
+   Step 2: Initialize a repository with GitHub Desktop
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#step-3-commit-the-csv-data-file">
+   Step 3: Commit the CSV data file
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#step-4-publish-the-repository-on-github">
+   Step 4: Publish the repository on GitHub
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#step-5-create-a-branch-commit-to-it-and-share-it">
+   Step 5: Create a branch, commit to it, and share it
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#step-6-fetch-and-pull-changes-from-the-web">
+   Step 6: Fetch and pull changes from the web
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="making-larger-changes-with-github-desktop">
+<h1>Making larger changes with GitHub Desktop<a class="headerlink" href="#making-larger-changes-with-github-desktop" title="Permalink to this headline">#</a></h1>
+<p>We will practice creating a new repository using GitHub Desktop, committing
+changes to it, browsing the changes, creating branches, and more.
+This is practically the same as the previous episode, but we introduce
+some new concepts:</p>
+<ul class="simple">
+<li><p>There are now two copies of your repository: that on your computer,
+and that on Github.</p></li>
+<li><p>We introduce the concepts of <strong>pull</strong> and <strong>fetch</strong> to move code
+GitHub→local, and <strong>push</strong> to move code local→GitHub.</p></li>
+<li><p><strong>GitHub Desktop</strong> is a application that lets you manage files with
+Git. It is <em>not</em> the only way to use Git, but it is easy and
+integrated, so it’s a nice thing to teach.</p></li>
+<li><p>One can share existing projects also using the web interface, so GitHub Desktop
+is <em>not</em> the only way to make an existing project available on GitHub.</p></li>
+</ul>
+<p>In small groups it can be useful to do this side by side (in-person) or one
+learner shares their screen (video) and others can ask questions and give
+suggestions. In a larger group the instructor can demonstrate these and then
+participants can try on their own and then ask questions.</p>
+<hr class="docutils" />
+<section id="step-1-create-an-example-spreadsheet">
+<h2>Step 1: Create an example spreadsheet<a class="headerlink" href="#step-1-create-an-example-spreadsheet" title="Permalink to this headline">#</a></h2>
+<p>In this exercise, we will share a data file in CSV (comma-separated
+values) format and see how GitHub nicely displays it. First, we
+need to make some CSV file.</p>
+<p>Either create a new CSV file:</p>
+<ul class="simple">
+<li><p>Create a spreadsheet with Excel/LibreOffice or similar, containing some fantasy data</p></li>
+<li><p>Export the spreadsheet to CSV format</p></li>
+</ul>
+<p>If you don’t feel like creating a new CSV file, you can download an example
+<a class="reference external" href="https://raw.githubusercontent.com/coderefinery/github-without-command-line/master/data/academy-award-female.csv">here</a>:</p>
+<ul class="simple">
+<li><p>Right-click and “Save as…”</p></li>
+</ul>
+<p>Make sure the file is actually in CSV format, not Excel/spreadsheet
+format.</p>
+</section>
+<hr class="docutils" />
+<section id="step-2-initialize-a-repository-with-github-desktop">
+<h2>Step 2: Initialize a repository with GitHub Desktop<a class="headerlink" href="#step-2-initialize-a-repository-with-github-desktop" title="Permalink to this headline">#</a></h2>
+<p>First, we make a new local repository. At this stage, the repository
+will only exist on our computer, not yet on GitHub.</p>
+<ul class="simple">
+<li><p>Start GitHub Desktop</p></li>
+<li><p>Click on “+ Create a New Repository on your hard drive…”</p></li>
+</ul>
+<a class="border reference internal image-reference" href="_images/before-create.png"><img alt="_images/before-create.png" class="border" src="_images/before-create.png" style="width: 600px;" /></a>
+<a class="border reference internal image-reference" href="_images/creating.png"><img alt="_images/creating.png" class="border" src="_images/creating.png" style="width: 600px;" /></a>
+</section>
+<hr class="docutils" />
+<section id="step-3-commit-the-csv-data-file">
+<h2>Step 3: Commit the CSV data file<a class="headerlink" href="#step-3-commit-the-csv-data-file" title="Permalink to this headline">#</a></h2>
+<p>Now, we add the CSV to git.  First, we put it in the git directory,
+then tell git to save it.</p>
+<ul class="simple">
+<li><p>Copy your (own or downloaded) CSV file to the repository folder</p></li>
+<li><p>Note how GitHub desktop changed and shows you the changes</p></li>
+<li><p>Make a commit</p></li>
+</ul>
+<a class="border reference internal image-reference" href="_images/diff-before-commit.png"><img alt="_images/diff-before-commit.png" class="border" src="_images/diff-before-commit.png" style="width: 600px;" /></a>
+</section>
+<hr class="docutils" />
+<section id="step-4-publish-the-repository-on-github">
+<h2>Step 4: Publish the repository on GitHub<a class="headerlink" href="#step-4-publish-the-repository-on-github" title="Permalink to this headline">#</a></h2>
+<p>This is the step where we actually upload it to Github.  Github
+Desktop lets us create a new repository on <a class="reference external" href="http://github.com">github.com</a> without using
+the web browser.  In this step, we also <strong>push</strong> the changes to the
+<strong>remote</strong> repository, though it happens without us seeing all the
+middle steps.</p>
+<ul class="simple">
+<li><p>Browse the history (click “History”)</p></li>
+<li><p>Don’t use the same name as the previous episode</p></li>
+<li><p>You can choose between a private and a public repository</p></li>
+<li><p>Click “Publish repository” (this only publishes the current branch)</p></li>
+<li><p>After you have pushed, visit the repository via the website</p></li>
+</ul>
+<a class="border reference internal image-reference" href="_images/publish.png"><img alt="_images/publish.png" class="border" src="_images/publish.png" style="width: 600px;" /></a>
+</section>
+<hr class="docutils" />
+<section id="step-5-create-a-branch-commit-to-it-and-share-it">
+<h2>Step 5: Create a branch, commit to it, and share it<a class="headerlink" href="#step-5-create-a-branch-commit-to-it-and-share-it" title="Permalink to this headline">#</a></h2>
+<p>This is pretty much the normal work: edit a file, commit it.  But, in
+this case, we are going to <strong>commit it to a new branch</strong>.  Why?  We’ll see
+later.</p>
+<ul class="simple">
+<li><p>Make a change to the CSV file directly on your computer, but do not commit yet</p></li>
+<li><p>Observe the change you made in GitHub Desktop before committing</p></li>
+<li><p>Create a new branch on GitHub Desktop</p></li>
+<li><p>“Bring my changes to …” the new branch:</p></li>
+</ul>
+<a class="border reference internal image-reference" href="_images/switch-branch.png"><img alt="_images/switch-branch.png" class="border" src="_images/switch-branch.png" style="width: 600px;" /></a>
+<ul class="simple">
+<li><p>Commit to the new branch on GitHub Desktop</p></li>
+<li><p>Publish the new branch to GitHub</p></li>
+<li><p>Browse your branches and changes on GitHub</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="step-6-fetch-and-pull-changes-from-the-web">
+<h2>Step 6: Fetch and pull changes from the web<a class="headerlink" href="#step-6-fetch-and-pull-changes-from-the-web" title="Permalink to this headline">#</a></h2>
+<p>Now we show how to <strong>fetch</strong> or <strong>pull</strong> code from Github→local.</p>
+<ul class="simple">
+<li><p>Edit the file via the GitHub web interface and commit there to <code class="docutils literal notranslate"><span class="pre">master</span></code></p></li>
+<li><p>Switch to GitHub Desktop</p></li>
+<li><p>Change current branch to <code class="docutils literal notranslate"><span class="pre">master</span></code></p></li>
+<li><p>Click “Fetch origin”</p></li>
+</ul>
+<a class="border reference internal image-reference" href="_images/fetch-origin.png"><img alt="_images/fetch-origin.png" class="border" src="_images/fetch-origin.png" style="width: 600px;" /></a>
+<ul class="simple">
+<li><p>Before continuing compare the histories on your computer and the network on GitHub and discuss what fetch did:</p></li>
+</ul>
+<a class="border reference internal image-reference" href="_images/network.png"><img alt="_images/network.png" class="border" src="_images/network.png" style="width: 600px;" /></a>
+<ul class="simple">
+<li><p>Click “Pull origin”</p></li>
+</ul>
+<a class="border reference internal image-reference" href="_images/pull-origin.png"><img alt="_images/pull-origin.png" class="border" src="_images/pull-origin.png" style="width: 600px;" /></a>
+<ul class="simple">
+<li><p>After pulling browse the “History” in GitHub Desktop</p></li>
+</ul>
+<a class="border reference internal image-reference" href="_images/after-pull.png"><img alt="_images/after-pull.png" class="border" src="_images/after-pull.png" style="width: 600px;" /></a>
+<p>What’s the difference between <strong>fetch</strong> and <strong>pull</strong>?  Fetch gets the
+changes, but doesn’t apply them locally.  Pull = fetch + apply changes
+locally in your current repository (does a <strong>merge</strong> which we will
+discuss later).</p>
+<hr class="docutils" />
+<div class="admonition-summary admonition">
+<p class="admonition-title">Summary</p>
+<p>With Github Desktop, we can do everything we can on the web, but it’s
+more natural.  The most important concepts are that of <strong>remotes</strong>
+(links between repositories), <strong>pushing</strong>, and <strong>pulling</strong>.</p>
+<p>We don’t cover it in this workshop, but you can eventually do all of
+these things from the command line, for example <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span> <span class="pre">some_file.csv</span></code>.  Once you are doing many things, this can be faster.
+Still, there’s almost always a place for applications like the GitHub Desktop
+and other graphical user interfaces to
+make things smoother.</p>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Code Refinery<br/>
+  
+      &copy; Copyright CC-BY.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

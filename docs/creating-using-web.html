@@ -1,0 +1,552 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Creating repositories using the web interface &#8212; GitHub without the command line</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="GitHub Issues and Pull Requests" href="contributing.html" />
+    <link rel="prev" title="Basics and motivation" href="basics.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">GitHub without the command line</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="index.html">
+                    Collaborating and sharing using GitHub without command line
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  The Lesson
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="basics.html">
+   Basics and motivation
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Creating repositories using the web interface
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="contributing.html">
+   GitHub Issues and Pull Requests
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="gh-desktop-changes.html">
+   Making changes with GitHub Desktop
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="gh-desktop-create.html">
+   Creating a respository with GitHub Desktop
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="websites.html">
+   Hosting websites on GitHub Pages
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="smithsonian.html">
+   Smithsonian Specifics
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Reference
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="quick-reference.html">
+   Quick reference
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="guide.html">
+   Instructor’s guide
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/creating-using-web.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#step-1-create-a-repository-with-a-readme-and-a-license">
+   Step 1: Create a repository with a README and a license
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#step-2-create-a-new-file">
+   Step 2: Create a new file
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#step-3-modify-a-file">
+   Step 3: Modify a file
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#markdown">
+   MarkDown
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Creating repositories using the web interface</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#step-1-create-a-repository-with-a-readme-and-a-license">
+   Step 1: Create a repository with a README and a license
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#step-2-create-a-new-file">
+   Step 2: Create a new file
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#step-3-modify-a-file">
+   Step 3: Modify a file
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#markdown">
+   MarkDown
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="creating-repositories-using-the-web-interface">
+<h1>Creating repositories using the web interface<a class="headerlink" href="#creating-repositories-using-the-web-interface" title="Permalink to this headline">#</a></h1>
+<p>We will practice creating a new repository using the web interface, committing
+changes to it, browsing the changes, creating branches, and more.
+This is everything you need to do basic file management, though you’ll
+probably want something faster to use.  Still, it can be good for
+quick edits and contributions.</p>
+<hr class="docutils" />
+<section id="step-1-create-a-repository-with-a-readme-and-a-license">
+<h2>Step 1: Create a repository with a README and a license<a class="headerlink" href="#step-1-create-a-repository-with-a-readme-and-a-license" title="Permalink to this headline">#</a></h2>
+<p>You start off by creating a repository from the web.  In fact, we
+usually end up doing this from the web, no matter how you do your daily
+work.  The important questions are who is the <em>owner</em> and what is the
+<em>name</em> of the repository.</p>
+<p>Make sure that you are <strong>logged into GitHub</strong>.</p>
+<p>To create a repository we either click the green button “New” (top left corner):</p>
+<a class="border reference internal image-reference" href="_images/new-top-left.png"><img alt="_images/new-top-left.png" class="border" src="_images/new-top-left.png" style="width: 400px;" /></a>
+<hr class="docutils" />
+<p>Or if you see your profile page, there is a “+” menu (top right corner):</p>
+<a class="border reference internal image-reference" href="_images/new-top-right.png"><img alt="_images/new-top-right.png" class="border" src="_images/new-top-right.png" style="width: 400px;" /></a>
+<hr class="docutils" />
+<p>We then land at the following form.  Please fill it out and set <strong>Initialize
+this repository with a README</strong> and choose a license.  If you don’t find a
+suitable license, we will show later how you can add your own.</p>
+<a class="border reference internal image-reference" href="_images/form.png"><img alt="_images/form.png" class="border" src="_images/form.png" style="width: 600px;" /></a>
+<hr class="docutils" />
+<p>And now we have a repository with a README and LICENSE and one commit:</p>
+<a class="border reference internal image-reference" href="_images/created.png"><img alt="_images/created.png" class="border" src="_images/created.png" style="width: 600px;" /></a>
+</section>
+<hr class="docutils" />
+<section id="step-2-create-a-new-file">
+<h2>Step 2: Create a new file<a class="headerlink" href="#step-2-create-a-new-file" title="Permalink to this headline">#</a></h2>
+<p>We can easily add new files from the web interface.</p>
+<p>Create a file, e.g. <code class="docutils literal notranslate"><span class="pre">guacamole.md</span></code> (the “md” ending signals that this is in Markdown format):</p>
+<a class="border reference internal image-reference" href="_images/new-file-buttons.png"><img alt="_images/new-file-buttons.png" class="border" src="_images/new-file-buttons.png" style="width: 600px;" /></a>
+<p>In the new file you can share your favorite cooking recipe (or something else).
+You can also copy-paste this as a starting point:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Ingredients</span><span class="p">:</span>
+<span class="o">-</span> <span class="mi">2</span> <span class="n">avocados</span>
+<span class="o">-</span> <span class="mi">1</span> <span class="n">lime</span>
+<span class="o">-</span> <span class="mi">2</span> <span class="n">tsp</span> <span class="n">salt</span>
+
+<span class="n">Instructions</span><span class="p">:</span>
+<span class="o">-</span> <span class="n">cut</span> <span class="ow">and</span> <span class="n">mash</span> <span class="n">avocados</span>
+<span class="o">-</span> <span class="n">chop</span> <span class="n">onion</span>
+<span class="o">-</span> <span class="n">squeeze</span> <span class="n">lime</span>
+<span class="o">-</span> <span class="n">add</span> <span class="n">salt</span>
+<span class="o">-</span> <span class="ow">and</span> <span class="n">mix</span> <span class="n">well</span>
+</pre></div>
+</div>
+<a class="border reference internal image-reference" href="_images/new-file-editor.png"><img alt="_images/new-file-editor.png" class="border" src="_images/new-file-editor.png" style="width: 400px;" /></a>
+<p>Then add a commit message and commit (save):</p>
+<a class="border reference internal image-reference" href="_images/new-file-commit.png"><img alt="_images/new-file-commit.png" class="border" src="_images/new-file-commit.png" style="width: 600px;" /></a>
+<div class="admonition-discussion-good-commit-messages admonition">
+<p class="admonition-title">Discussion: Good commit messages</p>
+<ul class="simple">
+<li><p>What has changed is more useful than which file has changed</p></li>
+<li><p>Sometimes we forget to document <em>why</em> something was changed</p></li>
+<li><p>Many projects start out as projects “just for me” and end up to be successful projects
+that are developed by 50 people over decades.</p></li>
+<li><p>Write commit messages in English that will be understood
+15 years from now by someone else than you.</p></li>
+<li><p><a class="reference external" href="https://fatbusinessman.com/2019/my-favourite-git-commit">“My favourite Git commit”</a></p></li>
+<li><p><a class="reference external" href="https://who-t.blogspot.com/2009/12/on-commit-messages.html">“On commit messages”</a></p></li>
+<li><p><a class="reference external" href="https://chris.beams.io/posts/git-commit/">“How to Write a Git Commit Message”</a></p></li>
+</ul>
+</div>
+</section>
+<hr class="docutils" />
+<section id="step-3-modify-a-file">
+<h2>Step 3: Modify a file<a class="headerlink" href="#step-3-modify-a-file" title="Permalink to this headline">#</a></h2>
+<p>We can also easily modify files from the web.</p>
+<p>Now improve the recipe by adding an ingredient or an instruction step:</p>
+<ul class="simple">
+<li><p>Click on the file.</p></li>
+<li><p>Click the “pen” icon on top right (“edit this file”).</p></li>
+</ul>
+<p>Make an improvement, write a commit message, commit:</p>
+<a class="border reference internal image-reference" href="_images/edit-file-preview.png"><img alt="_images/edit-file-preview.png" class="border" src="_images/edit-file-preview.png" style="width: 400px;" /></a>
+<p>Once you have done that, browse your commits:</p>
+<a class="border reference internal image-reference" href="_images/commits-browse.png"><img alt="_images/commits-browse.png" class="border" src="_images/commits-browse.png" style="width: 400px;" /></a>
+<p>In my example I got:</p>
+<a class="border reference internal image-reference" href="_images/commits-example.png"><img alt="_images/commits-example.png" class="border" src="_images/commits-example.png" style="width: 800px;" /></a>
+<hr class="docutils" />
+<div class="admonition-summary admonition">
+<p class="admonition-title">Summary</p>
+<p>In this episode, we saw how we could do basic file management from the
+web.  It’s not the best for making lots of new content, but it’s
+pretty convenient for quick edits.  We will now see more advanced ways
+to do the same things - you can always check back on the web to see
+the effect.</p>
+</div>
+</section>
+<section id="markdown">
+<h2>MarkDown<a class="headerlink" href="#markdown" title="Permalink to this headline">#</a></h2>
+<p>Markdown is a lightweight markup language for creating formatted text using a plain-text editor. John Gruber and Aaron Swartz created Markdown in 2004. (Wikipedia: <a class="reference external" href="https://en.wikipedia.org/wiki/Markdown">https://en.wikipedia.org/wiki/Markdown</a>)</p>
+<p>To practice using Markdown, and seeing how it is formatted, open up a <a class="reference external" href="https://codimd.carpentries.org/new">new CodiMD document</a> in your browser.</p>
+<p>By default, the document will open in rendered view, but click on the middle split pane icon in the top left to show the Markdown and rendered views side-by-side.</p>
+<a class="border reference internal image-reference" href="_images/codimd_edit.png"><img alt="_images/codimd_edit.png" class="border" src="_images/codimd_edit.png" style="width: 800px;" /></a>
+<p>Now using the CodiMD interface, we will learn the following Markdown equivalents:</p>
+<ul class="simple">
+<li><p>Headers</p></li>
+<li><p>Bold</p></li>
+<li><p>Italics</p></li>
+<li><p>Bullets</p></li>
+<li><p>Ordered Lists</p></li>
+<li><p>Images</p></li>
+<li><p>Links</p></li>
+</ul>
+<div class="tip admonition">
+<p class="admonition-title">Exercise</p>
+<p>Use as many of the Markdown skills you just learned to edit either the <a class="reference external" href="http://README.md">README.md</a> or <a class="reference external" href="http://guacamole.md">guacamole.md</a> files.</p>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="basics.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Basics and motivation</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="contributing.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">GitHub Issues and Pull Requests</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Code Refinery<br/>
+  
+      &copy; Copyright CC-BY.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
