@@ -21,22 +21,20 @@ Unless you need user authentication or a sophisticated database behind your webs
 [GitHub Pages](https://pages.github.com/) can be a very nice alternative
 to running your own web servers.
 
-This is how all
-[https://coderefinery.org](https://coderefinery.org)
-material is hosted.
+Go back to your initial recipes repository, and let's go into Settings to tell GitHub how to make your repository into a website.
 
+Now, let's add a new file call _config.yml.
 
-## Exercise
+Add the following text, and then commit the changes:
 
-- Deploy own website reusing a template
-- Make a change to the website after it has been deployed for the first time
-- Verify that the change shows up on the website a minute or two later
-
-The documentation for GitHub Pages is very good so no need for us to duplicate
-screenshots: [https://pages.github.com/](https://pages.github.com/)
-
-```{admonition} Discussion
-- You can use HTML directly or another static site generator if you prefer
-  to not use the default [Jekyll](https://jekyllrb.com/).
-- It is no problem to use a custom domain instead of `*.github.io`.
 ```
+plugins:
+  - jekyll-relative-links
+relative_links:
+  enabled: true
+include:
+  - README.md
+  - guacamole.md
+```
+
+Now go to the Actions tab at the top of the page, to watch as GitHub builds and deploys your website.

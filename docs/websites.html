@@ -276,36 +276,12 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
-</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercise">
-   Exercise
-  </a>
- </li>
-</ul>
-
-    </nav>
 </div>
     </div>
     <div class="article row">
@@ -317,19 +293,6 @@ title="Print to PDF"
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercise">
-   Exercise
-  </a>
- </li>
-</ul>
-
-                        </nav>
                     </div>
                 </div>
             </div>
@@ -348,27 +311,19 @@ also offer a very similar solution.</p>
 <p>Unless you need user authentication or a sophisticated database behind your website,
 <a class="reference external" href="https://pages.github.com/">GitHub Pages</a> can be a very nice alternative
 to running your own web servers.</p>
-<p>This is how all
-<a class="reference external" href="https://coderefinery.org">https://coderefinery.org</a>
-material is hosted.</p>
-<section id="exercise">
-<h2>Exercise<a class="headerlink" href="#exercise" title="Permalink to this headline">#</a></h2>
-<ul class="simple">
-<li><p>Deploy own website reusing a template</p></li>
-<li><p>Make a change to the website after it has been deployed for the first time</p></li>
-<li><p>Verify that the change shows up on the website a minute or two later</p></li>
-</ul>
-<p>The documentation for GitHub Pages is very good so no need for us to duplicate
-screenshots: <a class="reference external" href="https://pages.github.com/">https://pages.github.com/</a></p>
-<div class="admonition-discussion admonition">
-<p class="admonition-title">Discussion</p>
-<ul class="simple">
-<li><p>You can use HTML directly or another static site generator if you prefer
-to not use the default <a class="reference external" href="https://jekyllrb.com/">Jekyll</a>.</p></li>
-<li><p>It is no problem to use a custom domain instead of <code class="docutils literal notranslate"><span class="pre">*.github.io</span></code>.</p></li>
-</ul>
+<p>Go back to your initial recipes repository, and let’s go into Settings to tell GitHub how to make your repository into a website.</p>
+<p>Now, let’s add a new file call _config.yml.</p>
+<p>Add the following text, and then commit the changes:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">plugins</span><span class="p">:</span>
+  <span class="o">-</span> <span class="n">jekyll</span><span class="o">-</span><span class="n">relative</span><span class="o">-</span><span class="n">links</span>
+<span class="n">relative_links</span><span class="p">:</span>
+  <span class="n">enabled</span><span class="p">:</span> <span class="n">true</span>
+<span class="n">include</span><span class="p">:</span>
+  <span class="o">-</span> <span class="n">README</span><span class="o">.</span><span class="n">md</span>
+  <span class="o">-</span> <span class="n">guacamole</span><span class="o">.</span><span class="n">md</span>
+</pre></div>
 </div>
-</section>
+<p>Now go to the Actions tab at the top of the page, to watch as GitHub builds and deploys your website.</p>
 </section>
 
     <script type="text/x-thebe-config">

@@ -276,12 +276,36 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#step-1-make-your-initial-commit">
+   Step 1: Make your initial commit
+  </a>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
@@ -293,6 +317,19 @@ title="Print to PDF"
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#step-1-make-your-initial-commit">
+   Step 1: Make your initial commit
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -302,6 +339,21 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="creating-a-respository-with-github-desktop">
 <h1>Creating a respository with GitHub Desktop<a class="headerlink" href="#creating-a-respository-with-github-desktop" title="Permalink to this headline">#</a></h1>
+<p><strong>Scenario</strong>: You’ve been given a Zip file from a colleague (who does not know how to use GitHub) that contains a full analysis of avocado prices. You would like to share this analysis with other colleagues, and make improvements.</p>
+<section id="step-1-make-your-initial-commit">
+<h2>Step 1: Make your initial commit<a class="headerlink" href="#step-1-make-your-initial-commit" title="Permalink to this headline">#</a></h2>
+<p>First download the Zip file from <a class="reference external" href="https://smithsonianworkshops.github.io/2022-autumn-smithsonian/files/avocado_analysis.zip">https://smithsonianworkshops.github.io/2022-autumn-smithsonian/files/avocado_analysis.zip</a>, and unzip it to somewhere on your computer.</p>
+<p>In GitHub Desktop, go to File &gt; Add Local Repository, and select the unzipped folder.</p>
+<p>You should get a warning like this one that says “This directory does not appear to be a Git repository”. That’s ok. Click the “create a repository” link.</p>
+<a class="border reference internal image-reference" href="_images/add_local_warning.jpg"><img alt="_images/add_local_warning.jpg" class="border" src="_images/add_local_warning.jpg" style="width: 800px;" /></a>
+<p>On the Create a new repository window, fill out the options as below:</p>
+<a class="border reference internal image-reference" href="_images/create_new_repo.jpg"><img alt="_images/create_new_repo.jpg" class="border" src="_images/create_new_repo.jpg" style="width: 800px;" /></a>
+<p>Click on the History tab to show that an initial commit was already created.</p>
+<p>Now the button in the top right of the GitHub Desktop should read “Publish repository”. Click that button to upload it to GitHub.</p>
+<p>You will see a Publish repository window pop up. Make sure to uncheck “Keep this code private” (nothing secret here!), and then click “Publish repository”.</p>
+<a class="border reference internal image-reference" href="_images/publish_repo.jpg"><img alt="_images/publish_repo.jpg" class="border" src="_images/publish_repo.jpg" style="width: 800px;" /></a>
+<p>Now, navigate back to your new repository on GitHub. Check out how the <code class="docutils literal notranslate"><span class="pre">avocado_analysis.ipynb</span></code> Jupyter Notebook is nicely rendered. Same with the CSV file in the <code class="docutils literal notranslate"><span class="pre">cleaned_data</span></code> folder. But uh oh, look at the CSV file in <code class="docutils literal notranslate"><span class="pre">raw_data</span></code>.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
