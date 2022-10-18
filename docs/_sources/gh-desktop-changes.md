@@ -37,4 +37,37 @@ Click Clone to download the files ... and all of the associated history to your 
 
 ## Step 2: Add new files to the cloned directory
 
+Download this zip file from [https://smithsonianworkshops.github.io/2022-autumn-smithsonian/files/avocado_recipes.zip](https://smithsonianworkshops.github.io/2022-autumn-smithsonian/files/avocado_recipes.zip), and unzip to your Downloads folder (or anywhere else, temporarily). This .zip file contains 2 more avocado recipes in Markdown format, but you could imagine it containing several more.
+
+Copy or move the new Markdown files to the directory that you cloned from GitHub.
+
+*How has the Changes tab of the GitHub Desktop window updated?*
+
+Enter a commit message and description at the bottom of the Changes tab, and click the blue Commit button.
+
+Now check out the History tab to see your latest commit.
+
+Browse to the repository on the GitHub website. *Do you see the changes you just made?*
+
+Even though you have committed the changes to the Git history, they have not made their way to the GitHub repository. You will need to click to Push changes button in the top right to send them to GitHub. Do that now.
+
+Now the changes should appear on GitHub.
+
 ## Step 3: Make a conflicting change
+
+But what happens if you (or a collaborator) make conflicting changes on the GitHub website and on your local copy?
+
+Make a change in the README.md file of the web version to add internal links to the new recipes. On the web add the link to avocado_tomato_salad.md first, and then avocado_smoothie.md second. Commit this change.
+
+Now open the local copy of your README.md in a text editor, and add internal links to avocado_smoothie.md first, and then avocado_tomato_salad.md second. Commit the change.
+
+Try to push the changes to GitHub. *What happens why you try to do this?*
+
+Go back to the local copy of the README.md file in a text editor. *What has changed?*
+
+Now remove the conflicting text lines, and try pushing to GitHub again.
+
+```{admonition} Resolving conflicts
+Running into a git conflict is scary. If you feel like you are digging a deeper hole as you try to resolve the conflict (and the changes you are trying to make are minor), you can always Remove the local copy of the repository and clone it from GitHub again from scratch.
+```
+
