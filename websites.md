@@ -1,13 +1,13 @@
 ---
 layout: episode
-title: Hosting websites/homepages on GitHub Pages
+title: Hosting websites on GitHub Pages
 teaching: 30
 exercises: 0
 questions:
-  - How to serve a website/homepage using GitHub
+  - How to serve a website using GitHub
 ---
 
-# Hosting websites/homepages on GitHub Pages
+# Hosting websites on GitHub Pages
 
 You can host your personal homepage or group webpage
 or project website on GitHub using

@@ -5,11 +5,11 @@ parts:
     chapters:
     - file: basics
     - file: creating-using-web
-    - file: creating-using-desktop
     - file: contributing
-    - file: group-work
-    - file: doi
+    - file: gh-desktop-changes
+    - file: gh-desktop-create
     - file: websites
+    - file: smithsonian
   - caption: Reference
     chapters:
     - file: quick-reference
