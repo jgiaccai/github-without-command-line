@@ -21,10 +21,9 @@ to use it.
 
 This serves as an introduction to Git.  After this lesson, you will
 both be able to use Git, and feel much more confident taking a
-command-line course Git course such as
+command-line course Git course such as the [Software Carpentry Version Control with Git Lesson](https://swcarpentry.github.io/git-novice/) or 
 [CodeRefinery's git-intro
-course](https://coderefinery.github.io/git-intro/).  Check out our
-[other upcoming workshops](https://coderefinery.org/workshops/upcoming/).
+course](https://coderefinery.github.io/git-intro/).
 
 ```{admonition} Why GitHub
 We will do this exercise on [GitHub](https://github.com) but also
@@ -37,8 +36,7 @@ currently the most popular web platform for hosting Git repositories and the cha
 that you will interact with [GitHub](https://github.com)-based repositories even if you
 choose to host your Git repository on another platform.
 
-We also encourage course participants to use our new [Nordic research software repository platform](https://source.coderefinery.org),
-for more information see [https://coderefinery.org/repository/](https://coderefinery.org/repository/).
+The Smithsonian Institution has an Enterprise license agreement with GitHub, which we will discuss further at the end of this lesson.
 ```
 
 ## The lesson
@@ -48,12 +46,12 @@ for more information see [https://coderefinery.org/repository/](https://coderefi
 widths: auto
 ---
 20 min , {doc}`basics`
-30 min , {doc}`creating-using-web`
-40 min , {doc}`creating-using-desktop`
+40 min , {doc}`creating-using-web`
 60 min , {doc}`contributing`
-30 min , {doc}`group-work`
-30 min , {doc}`doi`
-30 min , {doc}`websites`
+40 min , {doc}`gh-desktop-changes`
+40 min , {doc}`gh-desktop-create`
+20 min , {doc}`websites`
+10 min , {doc}`smithsonian`
 ```
 
 ## Preparations
@@ -72,16 +70,7 @@ Please prepare these before the workshop:
  - Install GitHub Desktop:
    - [Windows and macOS](https://desktop.github.com/)
    - [Linux](https://github.com/shiftkey/desktop/blob/linux/README.md)
- - Read the following quick guides on attending workshops:
-   - Read our tips on [in
-   person](https://coderefinery.github.io/manuals/how-to-attend-inperson/)
-   or [online](https://coderefinery.github.io/manuals/how-to-attend-online/) workshops
-   - [Zoom signals we use](https://coderefinery.github.io/manuals/zoom-mechanics/)
-   - [How we use HackMD](https://coderefinery.github.io/manuals/hackmd-mechanics/)
 
-Troubleshooting:
- - GitHub Desktop not showing up on macOS launchpad:
-    - You can find it in "Downloads"
 ```
 
 Optional reading:
@@ -90,7 +79,11 @@ Optional reading:
 
 ## See also
 
-These similar workshops which serve as inspiration
+This workshop from CodeRefinery was a direct inspiration (some portions were lifted verbatim)
+
+- [https://github.com/coderefinery/github-without-command-line](https://github.com/coderefinery/github-without-command-line)
+
+The CodeRefinery lesson cites these materials as inspiration:
 
 - [https://github.com/lexnederbragt/github_collab_workshop](https://github.com/lexnederbragt/github_collab_workshop)
 - [https://github.com/arockenberger/github_collab_workshop](https://github.com/arockenberger/github_collab_workshop)

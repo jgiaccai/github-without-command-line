@@ -18,19 +18,6 @@ This is everything you need to do basic file management, though you'll
 probably want something faster to use.  Still, it can be good for
 quick edits and contributions.
 
-In small groups it can be useful to do this side by side (in-person) or one
-learner shares their screen (video) and others can ask questions and give
-suggestions. In a larger group the instructor can demonstrate these and then
-participants can try on their own and then ask questions.
-
-
-
-```{admonition} Instructor Note
-In this episode we are all in the main room and do these steps together as
-follow-along with pauses with time for questions and answers, no breakout rooms
-yet.
-```
-
 ---
 
 ## Step 1: Create a repository with a README and a license
@@ -57,11 +44,6 @@ Or if you see your profile page, there is a "+" menu (top right corner):
 :width: 400px
 :class: border
 ```
-
----
-
-Yet another way to create a new repository is to visit
-[https://github.com/new](https://github.com/new) directly.
 
 ---
 
@@ -169,90 +151,6 @@ In my example I got:
 
 ---
 
-## Step 4: Create a new branch
-
-A **branch** is a separate line of development. They are useful when
-you have multiple things going on at once and you don't want them to
-get in the way of each other.  It also allows collaboration, as we
-will learn in the next episode.
-
-- Create a new branch:
-  ```{image} /img/creating-using-web/create-branch.png
-  :width: 400px
-  :class: border
-  ```
-- Modify your recipe on the newly created branch. Make sure you commit to the new branch:
-  ```{image} /img/creating-using-web/commit-experiment-branch.png
-  :width: 400px
-  :class: border
-  ```
-- Then switch back to the `master` branch and browse your recipe there. Compare the file on both branches.
-
----
-
-## Step 5: Repository insights and settings
-
-Github gives us many insights into our repository.  Nothing here is
-really specific to Github (everything can be done with regular Git),
-but they make it especially easy to see.  The **network** lets you see
-how all commits and branches relate.
-
-Have a look at the network, hover over the dots in the graph
-(commits).  The network view is the best way to get an overview of
-your branches and commits, and it never hurts to come back here and
-check:
-
-```{image} /img/creating-using-web/network.png
-:width: 800px
-:class: border
-```
-
----
-
-## Step 6: Adding a license to an existing repository
-
-This is an optional step to show how we can add a license
-to an existing repository.
-
-- Visit [https://choosealicense.com/](https://choosealicense.com/) and let it guide you.
-- If you don't find a suitable license,
-  choose among [https://choosealicense.com/appendix/](https://choosealicense.com/appendix/).
-- Once you have chosen, click on the license name, and you can enter your GitHub repository URL (top right)
-  which will open a pull request (change request) to the repository:
-
-```{image} /img/creating-using-web/choosealicense.png
-:width: 800px
-:class: border
-```
-
----
-
-## Optional step: How can we merge branches?
-
-This is an optional step which the instructor may demonstrate and discuss:
-
-We made a separate branch, separate from the main branch `master`.
-What happens when we decide we like that change, and want to take it
-into use?  We will soon see the magic of Git.
-
-First browse to the overview of all branches:
-```{image} /img/creating-using-web/branches-click.png
-:width: 400px
-:class: border
-```
-
-Now to initiate a merge (request), click on "New pull request":
-```{image} /img/creating-using-web/branches-overview.png
-:width: 800px
-:class: border
-```
-
-Once a "pull request" (think of it as a change proposal) is open, it can be
-reviewed and merged. We will return to "pull requests" when we later discuss
-how to contribute changes.
-
----
-
 ```{admonition} Summary
 In this episode, we saw how we could do basic file management from the
 web.  It's not the best for making lots of new content, but it's
@@ -260,3 +158,31 @@ pretty convenient for quick edits.  We will now see more advanced ways
 to do the same things - you can always check back on the web to see
 the effect.
 ```
+
+## MarkDown
+
+Markdown is a lightweight markup language for creating formatted text using a plain-text editor. John Gruber and Aaron Swartz created Markdown in 2004. (Wikipedia: https://en.wikipedia.org/wiki/Markdown)
+
+To practice using Markdown, and seeing how it is formatted, open up a [new CodiMD document](https://codimd.carpentries.org/new) in your browser.
+
+By default, the document will open in rendered view, but click on the middle split pane icon in the top left to show the Markdown and rendered views side-by-side.
+
+```{image} /img/creating-using-web/codimd_edit.png
+:width: 800px
+:class: border
+```
+
+Now using the CodiMD interface, we will learn the following Markdown equivalents:
+
+* Headers
+* Bold
+* Italics
+* Bullets
+* Ordered Lists
+* Images
+* Links
+
+`````{admonition} Exercise
+:class: tip
+Use as many of the Markdown skills you just learned to edit either the README.md or guacamole.md files.
+`````
