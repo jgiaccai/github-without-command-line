@@ -302,7 +302,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -318,6 +320,16 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-0-add-links-to-your-recipes-in-readme-md">Step 0: Add links to your recipes in README.md</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-tell-github-to-make-your-pages">Step 1: Tell GitHub to make your pages</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-watch-github-build-your-page-live">Step 2: Watch GitHub build your page live</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -338,19 +350,41 @@ also offer a very similar solution.</p>
 <p>Unless you need user authentication or a sophisticated database behind your website,
 <a class="reference external" href="https://pages.github.com/">GitHub Pages</a> can be a very nice alternative
 to running your own web servers.</p>
-<p>Go back to your initial recipes repository, and let’s go into Settings to tell GitHub how to make your repository into a website.</p>
-<p>Now, let’s add a new file call _config.yml.</p>
-<p>Add the following text, and then commit the changes:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">plugins</span><span class="p">:</span>
-  <span class="o">-</span> <span class="n">jekyll</span><span class="o">-</span><span class="n">relative</span><span class="o">-</span><span class="n">links</span>
-<span class="n">relative_links</span><span class="p">:</span>
-  <span class="n">enabled</span><span class="p">:</span> <span class="n">true</span>
-<span class="n">include</span><span class="p">:</span>
-  <span class="o">-</span> <span class="n">README</span><span class="o">.</span><span class="n">md</span>
-  <span class="o">-</span> <span class="n">guacamole</span><span class="o">.</span><span class="n">md</span>
+<section id="step-0-add-links-to-your-recipes-in-readme-md">
+<h2>Step 0: Add links to your recipes in <a class="reference external" href="http://README.md">README.md</a><a class="headerlink" href="#step-0-add-links-to-your-recipes-in-readme-md" title="Permalink to this heading">#</a></h2>
+<p><em>(This is from Step 3 of <a class="reference external" href="https://miketrizna.github.io/github-without-command-line/gh-desktop-changes.html#step-3-make-a-conflicting-change">Making changes with GitHub Desktop</a>, so you may have already done this)</em></p>
+<p>Go back to your initial recipes repository, and edit your <a class="reference external" href="http://README.md">README.md</a> file so that you have links to your separate recipe markdown files.</p>
+<p>Here is sample text to include:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Avocado Recipes</span>
+<span class="n">A</span> <span class="n">collection</span> <span class="n">of</span> <span class="n">my</span> <span class="n">avocado</span> <span class="n">recipes</span>
+
+<span class="o">*</span> <span class="p">[</span><span class="n">Smoothie</span><span class="p">](</span><span class="n">avocado_smoothie</span><span class="o">.</span><span class="n">md</span><span class="p">)</span>
+<span class="o">*</span> <span class="p">[</span><span class="n">Guacamole</span><span class="p">](</span><span class="n">guacamole</span><span class="o">.</span><span class="n">md</span><span class="p">)</span>
+<span class="o">*</span> <span class="p">[</span><span class="n">Salad</span><span class="p">](</span><span class="n">avocado_tomato_salad</span><span class="o">.</span><span class="n">md</span><span class="p">)</span>
+
 </pre></div>
 </div>
-<p>Now go to the Actions tab at the top of the page, to watch as GitHub builds and deploys your website.</p>
+<p>Commit these changes.</p>
+</section>
+<section id="step-1-tell-github-to-make-your-pages">
+<h2>Step 1: Tell GitHub to make your pages<a class="headerlink" href="#step-1-tell-github-to-make-your-pages" title="Permalink to this heading">#</a></h2>
+<p>We need to tell GitHub how to make your repository into a website.</p>
+<p>Click on the Settings gear icon up top, and then click on the Pages section on the left side panel.</p>
+<p><img alt="A screenshot showing the GitHub Settings Page section" src="_images/settings_pages.jpg" /></p>
+<p>Click on the dropdown under Branch, and select “main” to tell GitHub to build a webpage from the “main” branch. Then make sure that “/root” is selected in the new dropdown that will populate. Click Save to make the web page build.</p>
+<p><img alt="A screenshot showing the GitHub Settings Page section, with main branch and root selected" src="_images/settings_main_root.jpg" /></p>
+</section>
+<section id="step-2-watch-github-build-your-page-live">
+<h2>Step 2: Watch GitHub build your page live<a class="headerlink" href="#step-2-watch-github-build-your-page-live" title="Permalink to this heading">#</a></h2>
+<p>Right after clicking Save, GitHub will start building your page using GitHub Actions (we could do a whole extra workshop on GitHub Actions).</p>
+<p>Click on the Actions icon on the top menu to see that a “workflow” has been triggered called “pages build and deployment”.</p>
+<p><img alt="A screenshot showing the GitHub Actions page with a deployment that has just been triggered" src="_images/github_actions_workflows.jpg" /></p>
+<p>If you clicked on the Actions tab fast enough, the circle next to the worflow name should be brown or yellow.</p>
+<p>Click on the “pages build and deployment” link. If the build was successful, all parts of the worlflow should show a green circle. And most importantly, the “deploy” portion should have a link to your new website!</p>
+<p><img alt="A screenshot showing details of a GitHub Actions workflow" src="_images/github_actions_built.jpg" /></p>
+<p>Click on that link (it should follow the pattern <code class="docutils literal notranslate"><span class="pre">https://[your</span> <span class="pre">username].github.io/recipes</span></code>). You should see a pretty basic webpage, but it’s completely built from the contents of your GitHub repository!</p>
+<p><img alt="A screenshot showing a simple webpage with links to recipes" src="_images/webpage.jpg" /></p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -411,6 +445,22 @@ to running your own web servers.</p>
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-0-add-links-to-your-recipes-in-readme-md">Step 0: Add links to your recipes in README.md</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-tell-github-to-make-your-pages">Step 1: Tell GitHub to make your pages</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-watch-github-build-your-page-live">Step 2: Watch GitHub build your page live</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
