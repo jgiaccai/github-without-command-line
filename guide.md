@@ -32,6 +32,19 @@
 First iteration of this workshop is given as 2 x (almost) 2 hours, one week
 apart.
 
+```{csv-table}
+---
+widths: auto
+---
+10 min , {doc}`basics`
+30 min , {doc}`creating-using-web`
+10 min , {doc}`choosing-a-license`
+45 min , {doc}`contributing`
+25 min , {doc}`gh-desktop-changes`
+25 min , {doc}`gh-desktop-create`
+20 min , {doc}`websites`
+10 min , {doc}`smithsonian`
+```
 
 ## Exercise repository for the "contributing" episode
 
