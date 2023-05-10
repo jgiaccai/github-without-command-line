@@ -45,8 +45,9 @@ The Smithsonian Institution has an Enterprise license agreement with GitHub, whi
 ---
 widths: auto
 ---
-20 min , {doc}`basics`
-40 min , {doc}`creating-using-web`
+10-15 min , {doc}`basics`
+25 min , {doc}`creating-using-web`
+10 min , {doc}`choosing a license`
 60 min , {doc}`contributing`
 40 min , {doc}`gh-desktop-changes`
 40 min , {doc}`gh-desktop-create`
