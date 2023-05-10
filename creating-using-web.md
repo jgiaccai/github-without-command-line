@@ -173,13 +173,62 @@ By default, the document will open in rendered view, but click on the middle spl
 
 Now using the CodiMD interface, we will learn the following Markdown equivalents:
 
-* Headers
-* Bold
-* Italics
-* Bullets
-* Ordered Lists
-* Images
-* Links
+Markdown uses keyboard characters to change formatting
+
+\\backslashes keep the special character visible
+
+Use double line returns (i.e. blank spaces between lines) to allow for proper spacing.  
+
+one
+return
+at
+end
+of
+each
+word
+
+two
+
+returns
+
+at 
+
+end
+
+of
+
+each
+
+word
+
+
+# heading is made using \#
+\# Big Heading
+## smaller heading is made using multiple \#
+\## smaller heading
+- bullet points can be made with \- or \*
+
+\- bullet style one
+
+\* bullet style two
+
+**bold uses double \*\* around your phrase**
+
+\*\*bold\*\*
+
+_italic uses \_ underscores_
+
+\_italic\_
+
+1. number in list
+2. automatically populates once you type '1.'
+
+let's try a [link](http://www.github.com)
+you must include the 'http://' for the link to work correctly
+
+\\-backslashes keep the special character visible
+
+
 
 `````{admonition} Exercise
 :class: tip
