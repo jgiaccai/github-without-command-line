@@ -5,6 +5,7 @@ parts:
     chapters:
     - file: basics
     - file: creating-using-web
+    - file: choosing-a-license
     - file: contributing
     - file: gh-desktop-changes
     - file: gh-desktop-create

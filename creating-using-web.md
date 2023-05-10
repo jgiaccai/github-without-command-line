@@ -48,8 +48,7 @@ Or if you see your profile page, there is a "+" menu (top right corner):
 ---
 
 We then land at the following form.  Please fill it out and set **Initialize
-this repository with a README** and choose a license.  If you don't find a
-suitable license, we will show later how you can add your own.
+this repository with a README**. Leave "Choose a License" as "None". We will address this in the next section on [choosing a license](choosing_a_license.md).
 
 ```{image} /img/creating-using-web/form.png
 :width: 600px
