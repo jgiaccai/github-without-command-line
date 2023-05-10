@@ -356,11 +356,16 @@ document.write(`
 </section>
 <section id="step-2-add-new-files-to-the-cloned-directory">
 <h2>Step 2: Add new files to the cloned directory<a class="headerlink" href="#step-2-add-new-files-to-the-cloned-directory" title="Permalink to this heading">#</a></h2>
-<p>Download this zip file from <a class="reference external" href="https://smithsonianworkshops.github.io/2022-autumn-smithsonian/files/avocado_recipes.zip">https://smithsonianworkshops.github.io/2022-autumn-smithsonian/files/avocado_recipes.zip</a>, and unzip to your Downloads folder (or anywhere else, temporarily). This .zip file contains 2 more avocado recipes in Markdown format, but you could imagine it containing several more.</p>
+<p>Download this zip file from <a class="github reference external" href="https://github.com/MikeTrizna/github-without-command-line/raw/master/data/avocado_recipes.zip">MikeTrizna/github-without-command-line</a>, and unzip to your Downloads folder (or anywhere else, temporarily). This .zip file contains 2 more avocado recipes in Markdown format, but you could imagine it containing several more.</p>
 <p>Copy or move the new Markdown files to the directory that you cloned from GitHub.</p>
+<div class="admonition-exercise admonition">
+<p class="admonition-title">Exercise</p>
 <p><em>How has the Changes tab of the GitHub Desktop window updated?</em></p>
+</div>
 <p>Enter a commit message and description at the bottom of the Changes tab, and click the blue Commit button.</p>
+<a class="border reference internal image-reference" href="_images/desktop_changes.jpg"><img alt="_images/desktop_changes.jpg" class="border" src="_images/desktop_changes.jpg" style="width: 800px;" /></a>
 <p>Now check out the History tab to see your latest commit.</p>
+<a class="border reference internal image-reference" href="_images/desktop_history.jpg"><img alt="_images/desktop_history.jpg" class="border" src="_images/desktop_history.jpg" style="width: 800px;" /></a>
 <p>Browse to the repository on the GitHub website. <em>Do you see the changes you just made?</em></p>
 <p>Even though you have committed the changes to the Git history, they have not made their way to the GitHub repository. You will need to click to Push changes button in the top right to send them to GitHub. Do that now.</p>
 <p>Now the changes should appear on GitHub.</p>
@@ -368,10 +373,33 @@ document.write(`
 <section id="step-3-make-a-conflicting-change">
 <h2>Step 3: Make a conflicting change<a class="headerlink" href="#step-3-make-a-conflicting-change" title="Permalink to this heading">#</a></h2>
 <p>But what happens if you (or a collaborator) make conflicting changes on the GitHub website and on your local copy?</p>
-<p>Make a change in the <a class="reference external" href="http://README.md">README.md</a> file of the web version to add internal links to the new recipes. On the web add the link to avocado_tomato_salad.md first, and then avocado_smoothie.md second. Commit this change.</p>
+<p>Make a change in the <a class="reference external" href="http://README.md">README.md</a> file of the web version to add internal links to the new recipes. On the web add the link to avocado_tomato_salad.md first, and then avocado_smoothie.md second.</p>
+<p>It should look like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Avocado Recipes</span>
+<span class="n">A</span> <span class="n">collection</span> <span class="n">of</span> <span class="n">my</span> <span class="n">avocado</span> <span class="n">recipes</span>
+
+<span class="o">*</span> <span class="p">[</span><span class="n">Salad</span><span class="p">](</span><span class="n">avocado_tomato_salad</span><span class="o">.</span><span class="n">md</span><span class="p">)</span>
+<span class="o">*</span> <span class="p">[</span><span class="n">Smoothie</span><span class="p">](</span><span class="n">avocado_smoothie</span><span class="o">.</span><span class="n">md</span><span class="p">)</span>
+<span class="o">*</span> <span class="p">[</span><span class="n">Guacamole</span><span class="p">](</span><span class="n">guacamole</span><span class="o">.</span><span class="n">md</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Commit this change.</p>
 <p>Now open the local copy of your <a class="reference external" href="http://README.md">README.md</a> in a text editor, and add internal links to avocado_smoothie.md first, and then avocado_tomato_salad.md second. Commit the change.</p>
-<p>Try to push the changes to GitHub. <em>What happens why you try to do this?</em></p>
+<p>It should look like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Avocado Recipes</span>
+<span class="n">A</span> <span class="n">collection</span> <span class="n">of</span> <span class="n">my</span> <span class="n">avocado</span> <span class="n">recipes</span>
+
+<span class="o">*</span> <span class="p">[</span><span class="n">Smoothie</span><span class="p">](</span><span class="n">avocado_smoothie</span><span class="o">.</span><span class="n">md</span><span class="p">)</span>
+<span class="o">*</span> <span class="p">[</span><span class="n">Salad</span><span class="p">](</span><span class="n">avocado_tomato_salad</span><span class="o">.</span><span class="n">md</span><span class="p">)</span>
+<span class="o">*</span> <span class="p">[</span><span class="n">Guacamole</span><span class="p">](</span><span class="n">guacamole</span><span class="o">.</span><span class="n">md</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Try to push the changes to GitHub. <em>What new options appear in the place of “Push origin”?</em></p>
+<a class="border reference internal image-reference" href="_images/conflicting_changes_options.jpg"><img alt="_images/conflicting_changes_options.jpg" class="border" src="_images/conflicting_changes_options.jpg" style="width: 800px;" /></a>
+<p>Click on “Pull origin”. You should get a warning like this:</p>
+<img alt="_images/resolve_conflicts.jpg" class="border" src="_images/resolve_conflicts.jpg" />
 <p>Go back to the local copy of the <a class="reference external" href="http://README.md">README.md</a> file in a text editor. <em>What has changed?</em></p>
+<img alt="_images/vscode_conflicts.jpg" class="border" src="_images/vscode_conflicts.jpg" />
 <p>Now remove the conflicting text lines, and try pushing to GitHub again.</p>
 <div class="admonition-resolving-conflicts admonition">
 <p class="admonition-title">Resolving conflicts</p>

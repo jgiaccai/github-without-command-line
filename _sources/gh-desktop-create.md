@@ -13,7 +13,7 @@ questions:
 
 ## Step 1: Make your initial commit
 
-First download the Zip file from [https://smithsonianworkshops.github.io/2022-autumn-smithsonian/files/avocado_analysis.zip](https://smithsonianworkshops.github.io/2022-autumn-smithsonian/files/avocado_analysis.zip), and unzip it to somewhere on your computer.
+First download the Zip file from [https://github.com/MikeTrizna/github-without-command-line/raw/master/data/avocado_analysis.zip](https://github.com/MikeTrizna/github-without-command-line/raw/master/data/avocado_analysis.zip), and unzip it to somewhere on your computer.
 
 In GitHub Desktop, go to File > Add Local Repository, and select the unzipped folder.
 
