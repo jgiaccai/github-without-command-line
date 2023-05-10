@@ -37,15 +37,27 @@ Click Clone to download the files ... and all of the associated history to your 
 
 ## Step 2: Add new files to the cloned directory
 
-Download this zip file from [https://smithsonianworkshops.github.io/2022-autumn-smithsonian/files/avocado_recipes.zip](https://smithsonianworkshops.github.io/2022-autumn-smithsonian/files/avocado_recipes.zip), and unzip to your Downloads folder (or anywhere else, temporarily). This .zip file contains 2 more avocado recipes in Markdown format, but you could imagine it containing several more.
+Download this zip file from [https://github.com/MikeTrizna/github-without-command-line/raw/master/data/avocado_recipes.zip](https://github.com/MikeTrizna/github-without-command-line/raw/master/data/avocado_recipes.zip), and unzip to your Downloads folder (or anywhere else, temporarily). This .zip file contains 2 more avocado recipes in Markdown format, but you could imagine it containing several more.
 
 Copy or move the new Markdown files to the directory that you cloned from GitHub.
 
+```{admonition} Exercise
 *How has the Changes tab of the GitHub Desktop window updated?*
+```
 
 Enter a commit message and description at the bottom of the Changes tab, and click the blue Commit button.
 
+```{image} /img/gh-desktop-changes/desktop_changes.jpg
+:width: 800px
+:class: border
+```
+
 Now check out the History tab to see your latest commit.
+
+```{image} /img/gh-desktop-changes/desktop_history.jpg
+:width: 800px
+:class: border
+```
 
 Browse to the repository on the GitHub website. *Do you see the changes you just made?*
 
@@ -57,13 +69,52 @@ Now the changes should appear on GitHub.
 
 But what happens if you (or a collaborator) make conflicting changes on the GitHub website and on your local copy?
 
-Make a change in the README.md file of the web version to add internal links to the new recipes. On the web add the link to avocado_tomato_salad.md first, and then avocado_smoothie.md second. Commit this change.
+Make a change in the README.md file of the web version to add internal links to the new recipes. On the web add the link to avocado_tomato_salad.md first, and then avocado_smoothie.md second.
+
+It should look like this:
+
+```
+# Avocado Recipes
+A collection of my avocado recipes
+
+* [Salad](avocado_tomato_salad.md)
+* [Smoothie](avocado_smoothie.md)
+* [Guacamole](guacamole.md)
+```
+
+Commit this change.
 
 Now open the local copy of your README.md in a text editor, and add internal links to avocado_smoothie.md first, and then avocado_tomato_salad.md second. Commit the change.
 
-Try to push the changes to GitHub. *What happens why you try to do this?*
+It should look like this:
+
+```
+# Avocado Recipes
+A collection of my avocado recipes
+
+* [Smoothie](avocado_smoothie.md)
+* [Salad](avocado_tomato_salad.md)
+* [Guacamole](guacamole.md)
+```
+
+Try to push the changes to GitHub. *What new options appear in the place of "Push origin"?*
+
+```{image} /img/gh-desktop-changes/conflicting_changes_options.jpg
+:width: 800px
+:class: border
+```
+
+Click on "Pull origin". You should get a warning like this:
+
+```{image} /img/gh-desktop-changes/resolve_conflicts.jpg
+:class: border
+```
 
 Go back to the local copy of the README.md file in a text editor. *What has changed?*
+
+```{image} /img/gh-desktop-changes/vscode_conflicts.jpg
+:class: border
+```
 
 Now remove the conflicting text lines, and try pushing to GitHub again.
 
