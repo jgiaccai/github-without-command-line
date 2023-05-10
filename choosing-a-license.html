@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Making changes with GitHub Desktop &#8212; GitHub without the command line</title>
+    <title>Choosing a license &#8212; GitHub without the command line</title>
   
   
   
@@ -61,11 +61,11 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'gh-desktop-changes';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'choosing-a-license';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Creating a respository with GitHub Desktop" href="gh-desktop-create.html" />
-    <link rel="prev" title="GitHub Issues and Pull Requests" href="contributing.html" />
+    <link rel="next" title="GitHub Issues and Pull Requests" href="contributing.html" />
+    <link rel="prev" title="Creating repositories using the web interface" href="creating-using-web.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -154,9 +154,9 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="basics.html">Basics and motivation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="creating-using-web.html">Creating repositories using the web interface</a></li>
-<li class="toctree-l1"><a class="reference internal" href="choosing-a-license.html">Choosing a license</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Choosing a license</a></li>
 <li class="toctree-l1"><a class="reference internal" href="contributing.html">GitHub Issues and Pull Requests</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Making changes with GitHub Desktop</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gh-desktop-changes.html">Making changes with GitHub Desktop</a></li>
 <li class="toctree-l1"><a class="reference internal" href="gh-desktop-create.html">Creating a respository with GitHub Desktop</a></li>
 <li class="toctree-l1"><a class="reference internal" href="websites.html">Hosting websites on GitHub Pages</a></li>
 <li class="toctree-l1"><a class="reference internal" href="smithsonian.html">Smithsonian Specifics</a></li>
@@ -208,7 +208,7 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="article-header-buttons">
 
 
-<a href="https://github.com/MikeTrizna/github-without-command-line/edit/master/gh-desktop-changes.md" target="_blank"
+<a href="https://github.com/MikeTrizna/github-without-command-line/edit/master/choosing-a-license.md" target="_blank"
    class="btn btn-sm btn-source-edit-button"
    title="Suggest edit"
    data-bs-placement="bottom" data-bs-toggle="tooltip"
@@ -234,7 +234,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="_sources/gh-desktop-changes.md" target="_blank"
+      <li><a href="_sources/choosing-a-license.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -316,7 +316,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Making changes with GitHub Desktop</h1>
+    <h1>Choosing a license</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -326,9 +326,9 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-open-github-desktop-and-sign-in">Step 1: Open GitHub Desktop and Sign In</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-add-new-files-to-the-cloned-directory">Step 2: Add new files to the cloned directory</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-make-a-conflicting-change">Step 3: Make a conflicting change</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-you-should-choose-a-license">Why you should choose a license</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#licenses-for-software-and-non-software">Licenses for software and non-software</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#choosing-a-license-on-github">Choosing a license on GitHub</a></li>
 </ul>
             </nav>
         </div>
@@ -340,43 +340,36 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="making-changes-with-github-desktop">
-<h1>Making changes with GitHub Desktop<a class="headerlink" href="#making-changes-with-github-desktop" title="Permalink to this heading">#</a></h1>
-<p><strong>Scenario</strong>: You’ve created a repository through the web interface, but now you have multiple files that you would like to add. <em>Do you see an easy way to do this in the web interface?</em></p>
-<section id="step-1-open-github-desktop-and-sign-in">
-<h2>Step 1: Open GitHub Desktop and Sign In<a class="headerlink" href="#step-1-open-github-desktop-and-sign-in" title="Permalink to this heading">#</a></h2>
-<a class="border reference internal image-reference" href="_images/desktop_welcome.jpg"><img alt="_images/desktop_welcome.jpg" class="border" src="_images/desktop_welcome.jpg" style="width: 800px;" /></a>
-<p>On Windows, go to File &gt; Options. On Mac, go to GitHub Desktop &gt; Preferences.</p>
-<p>On the Accounts tab, click the Sign In button to sign in with your GitHub credentials in the browser.</p>
-<p>Even though the friendly welcome screen has a big button to clone a repository, that welcome screen won’t always be there. The more consistent way to do this is to click on File &gt; Clone repository.</p>
-<a class="border reference internal image-reference" href="_images/clone_repo.jpg"><img alt="_images/clone_repo.jpg" class="border" src="_images/clone_repo.jpg" style="width: 800px;" /></a>
-<p>In the <a class="reference external" href="http://Github.com">Github.com</a> tab, all of your repositories will be listed. Scroll until you find the recipes repository you created in the previous lesson.</p>
-<p>Now choose a folder on your computer where it makes sense to save those files. The default is probably fine, but remember where it is.</p>
-<p>Click Clone to download the files … and all of the associated history to your computer.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="choosing-a-license">
+<h1>Choosing a license<a class="headerlink" href="#choosing-a-license" title="Permalink to this heading">#</a></h1>
+<section id="why-you-should-choose-a-license">
+<h2>Why you should choose a license<a class="headerlink" href="#why-you-should-choose-a-license" title="Permalink to this heading">#</a></h2>
+<p>From the <a class="reference external" href="https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository">GitHub documentation</a>, which are licensed under “Creative Commons Attribution 4.0 International”:</p>
+<p>“You’re under no obligation to choose a license. However, without a license, the default copyright laws apply, meaning that you retain all rights to your source code and no one may reproduce, distribute, or create derivative works from your work.”</p>
 </section>
-<section id="step-2-add-new-files-to-the-cloned-directory">
-<h2>Step 2: Add new files to the cloned directory<a class="headerlink" href="#step-2-add-new-files-to-the-cloned-directory" title="Permalink to this heading">#</a></h2>
-<p>Download this zip file from <a class="reference external" href="https://smithsonianworkshops.github.io/2022-autumn-smithsonian/files/avocado_recipes.zip">https://smithsonianworkshops.github.io/2022-autumn-smithsonian/files/avocado_recipes.zip</a>, and unzip to your Downloads folder (or anywhere else, temporarily). This .zip file contains 2 more avocado recipes in Markdown format, but you could imagine it containing several more.</p>
-<p>Copy or move the new Markdown files to the directory that you cloned from GitHub.</p>
-<p><em>How has the Changes tab of the GitHub Desktop window updated?</em></p>
-<p>Enter a commit message and description at the bottom of the Changes tab, and click the blue Commit button.</p>
-<p>Now check out the History tab to see your latest commit.</p>
-<p>Browse to the repository on the GitHub website. <em>Do you see the changes you just made?</em></p>
-<p>Even though you have committed the changes to the Git history, they have not made their way to the GitHub repository. You will need to click to Push changes button in the top right to send them to GitHub. Do that now.</p>
-<p>Now the changes should appear on GitHub.</p>
+<section id="licenses-for-software-and-non-software">
+<h2>Licenses for software and non-software<a class="headerlink" href="#licenses-for-software-and-non-software" title="Permalink to this heading">#</a></h2>
+<p>Keep in mind that GitHub was originally designed to keep track of software source code, so most of the guidance you will see about licenses on GitHub are geared towards software. However, it is important to distinguish between software and non-software “creative works”.</p>
+<p>Non-software creative works are typically licensed under one of the Creative Commons licenses. The Creative Commons specifically recommends against using Creative Commons licenses for software: <a class="reference external" href="https://creativecommons.org/faq/#can-i-apply-a-creative-commons-license-to-software">https://creativecommons.org/faq/#can-i-apply-a-creative-commons-license-to-software</a>.</p>
 </section>
-<section id="step-3-make-a-conflicting-change">
-<h2>Step 3: Make a conflicting change<a class="headerlink" href="#step-3-make-a-conflicting-change" title="Permalink to this heading">#</a></h2>
-<p>But what happens if you (or a collaborator) make conflicting changes on the GitHub website and on your local copy?</p>
-<p>Make a change in the <a class="reference external" href="http://README.md">README.md</a> file of the web version to add internal links to the new recipes. On the web add the link to avocado_tomato_salad.md first, and then avocado_smoothie.md second. Commit this change.</p>
-<p>Now open the local copy of your <a class="reference external" href="http://README.md">README.md</a> in a text editor, and add internal links to avocado_smoothie.md first, and then avocado_tomato_salad.md second. Commit the change.</p>
-<p>Try to push the changes to GitHub. <em>What happens why you try to do this?</em></p>
-<p>Go back to the local copy of the <a class="reference external" href="http://README.md">README.md</a> file in a text editor. <em>What has changed?</em></p>
-<p>Now remove the conflicting text lines, and try pushing to GitHub again.</p>
-<div class="admonition-resolving-conflicts admonition">
-<p class="admonition-title">Resolving conflicts</p>
-<p>Running into a git conflict is scary. If you feel like you are digging a deeper hole as you try to resolve the conflict (and the changes you are trying to make are minor), you can always Remove the local copy of the repository and clone it from GitHub again from scratch.</p>
-</div>
+<section id="choosing-a-license-on-github">
+<h2>Choosing a license on GitHub<a class="headerlink" href="#choosing-a-license-on-github" title="Permalink to this heading">#</a></h2>
+<p>Even though we skipped choosing a license in the initial GitHub “New Repository” interface, we can still access a special license selection helper.</p>
+<p>From the main repository, click “Add File” and then “Create new file”. You should see an interface similar to when you created <a class="reference external" href="http://guacamole.md">guacamole.md</a> in the previous section.</p>
+<p>In the “Name your file” box, type in LICENSE. A “Choose your license template” icon should show up.</p>
+<p><img alt="A screenshot showing an option to Choose a license template" src="_images/choose_a_license_template.jpg" /></p>
+<p>Click this.</p>
+<p>You will see a popup asking if it’s ok to discard changes. We haven’t added anything yet, so that’s ok.</p>
+<p>You will now see a really nice interface that shows the most often used licenses on GitHub, some summary information about each license, the full text, and an option to add your name to the license.</p>
+<p><img alt="A screenshot showing the GitHub license chooser interface" src="_images/license_chooser.jpg" /></p>
+<p>Click on a few licenses to see how they differ.</p>
+<p>At the Smithsonian, if you are not a federal employee, we recommend either the MIT License or Apache License. See if you can figure out why.</p>
+<p>If you are a federal employee and code was written as part of your official duties, then your code cannot be copyrighted. An agency-specific example of this can be seen in <a class="reference external" href="https://www.ncbi.nlm.nih.gov/IEB/ToolBox/CPP_DOC/lxr/source/scripts/projects/blast/LICENSE">license of the popular BLAST software</a>, which is distributed by the NIH. This license is very similar to the “Unlicense”. Check that one out.</p>
+<p>For our specific use case of publishing a recipe, this is not software code so we can narrow down to one of the Creative Common licenses.</p>
+<p>It is actually established US law that food recipes are <a class="reference external" href="https://www.copyright.gov/circs/circ33.pdf">“uncopyrightable”</a>. So for this case, we should choose the “Creative Commons Zero” license, which basically says we claim no copyright.</p>
+<p>Choose this license, and then click “Review and submit” to get back to load the CC0 license text, and return to the normal Edit File interface.</p>
+<p><img alt="A screenshot showing a green button that says &quot;Review and submit&quot;" src="_images/cc0_review_and_submit.jpg" /></p>
+<p>Click “Commit Changes” to add this license to your repository.</p>
 </section>
 </section>
 
@@ -412,20 +405,20 @@ document.write(`
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="contributing.html"
+       href="creating-using-web.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">GitHub Issues and Pull Requests</p>
+        <p class="prev-next-title">Creating repositories using the web interface</p>
       </div>
     </a>
     <a class="right-next"
-       href="gh-desktop-create.html"
+       href="contributing.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Creating a respository with GitHub Desktop</p>
+        <p class="prev-next-title">GitHub Issues and Pull Requests</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -447,9 +440,9 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-open-github-desktop-and-sign-in">Step 1: Open GitHub Desktop and Sign In</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-add-new-files-to-the-cloned-directory">Step 2: Add new files to the cloned directory</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-make-a-conflicting-change">Step 3: Make a conflicting change</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-you-should-choose-a-license">Why you should choose a license</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#licenses-for-software-and-non-software">Licenses for software and non-software</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#choosing-a-license-on-github">Choosing a license on GitHub</a></li>
 </ul>
   </nav></div>
 
